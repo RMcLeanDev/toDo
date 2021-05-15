@@ -1,13 +1,26 @@
 import React from 'react';
-import '../scss/App.scss'
+import '../scss/App.scss';
+import Error404 from './Error404';
+import Home from './Home';
+import { Switch, Route } from 'react-router-dom';
+import {connect} from 'react-redux';
 
-function App(){
-    return(
-        <div className="App">
-            <p>THIS IS THE NEW MAIN APP.JS</p>
-            <h3>not gonna lie kinda annoying is doens't hot load</h3>
-        </div>
-    )
+function App(props) {
+
+  console.log(props)
+  
+  return (
+    <div className="App">
+      <Switch>
+        <Route exact path ='/' component={Home}/>
+        <Route component={Error404}/>
+      </Switch>
+    </div>
+  );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  authUser: state.authState
+})
+
+export default connect(mapStateToProps)(App);

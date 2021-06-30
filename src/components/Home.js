@@ -12,7 +12,7 @@ function Home(props){
   return(
     <div>
       <Header />
-      <h1>Welcome to the home component</h1>
+      <h1>Welcome to the home component. My Dog is super tired!</h1>
       <button onClick={testRedux}>Test Reducer Function. Open console to see console log.</button>
     </div>
   )

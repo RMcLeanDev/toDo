@@ -4,6 +4,7 @@ import Error404 from './Error404';
 import Home from './Home';
 import { Switch, Route } from 'react-router-dom';
 import {connect} from 'react-redux';
+import UnathHome from './unauthenticated/UnathHome';
 
 function App(props) {
 
